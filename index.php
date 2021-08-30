@@ -8,22 +8,15 @@
     
     <?php
 
-        $path_parts = pathinfo('./videos/Angel Wicky.mp4');
-
-        // echo $path_parts['dirname'], "<br>";
-        // echo $path_parts['basename'], "<br>";
-        // echo $path_parts['extension'], "<br>";
-        // echo $path_parts['filename'], "<br>";
-
         function makeLink($fileName){
-            echo "<p><a href=\"./videos/{$fileName}\" download>{$fileName}</a></p>";
+            echo "<p><a href=\"./videos2/{$fileName}\" download>{$fileName}</a></p>";
         }
 
-        if ($handle = opendir('./videos')) {
+        if ($handle = opendir('./videos2')) {
 
             while (false !== ($entry = readdir($handle))) {
         
-                if ($entry != "." && $entry != "..") {
+                if ($entry != "." && $entry != ".." && $entry != ".htaccess") {
         
                     makeLink($entry);
                 }
