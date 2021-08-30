@@ -16,7 +16,7 @@
 
             while (false !== ($entry = readdir($handle))) {
         
-                if ($entry != "." && $entry != ".." && $entry != ".htaccess") {
+                if ($entry != "." && $entry != ".." && $entry != ".htaccess" && $entry != "info.txt") {
         
                     makeLink($entry);
                 }
