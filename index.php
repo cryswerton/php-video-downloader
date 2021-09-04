@@ -13,27 +13,38 @@
 
     </header>
 
-    <div class="content">
+    <button data-page="home" class="btn btn-info m-3">Home</button>
+    <button data-page="about" class="btn btn-light">About</button>
 
-        <?php
+    <div class="content my-5">
 
-            function makeLink($fileName){
-                echo "<p><a href=\"./videos2/{$fileName}\" download>{$fileName}</a></p>";
-            }
+        <div id="home">
 
-            if ($handle = opendir('./videos2')) {
+            <?php
 
-                while (false !== ($entry = readdir($handle))) {
-            
-                    if ($entry != "." && $entry != ".." && $entry != ".htaccess" && $entry != "info.txt") {
-            
-                        makeLink($entry);
-                    }
+                function makeLink($fileName){
+                    echo "<p><a href=\"./videos2/{$fileName}\" download>{$fileName}</a></p>";
                 }
-            
-                closedir($handle);
-            }
-        ?>
+
+                if ($handle = opendir('./videos2')) {
+
+                    while (false !== ($entry = readdir($handle))) {
+                
+                        if ($entry != "." && $entry != ".." && $entry != ".htaccess" && $entry != "info.txt") {
+                
+                            makeLink($entry);
+                        }
+                    }
+                
+                    closedir($handle);
+                }
+            ?>
+
+        </div>
+
+        <div id="about">
+    
+        </div>
 
     </div>
 
