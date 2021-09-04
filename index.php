@@ -16,6 +16,8 @@
 
     </header>
 
+    <hr>
+
     <div class="content my-5">
 
         <div id="home">
