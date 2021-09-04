@@ -13,9 +13,6 @@
 
     </header>
 
-    <button data-page="home" class="btn btn-info m-3">Home</button>
-    <button data-page="about" class="btn btn-light">About</button>
-
     <div class="content my-5">
 
         <div id="home">
@@ -40,10 +37,6 @@
                 }
             ?>
 
-        </div>
-
-        <div id="about">
-    
         </div>
 
     </div>
