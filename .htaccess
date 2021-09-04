@@ -1,11 +1,3 @@
-<Files ~ "^.*">
-  Deny from all
-</Files>
-
-<Files ~ "^index\.php|css|js|.*\.png|.*\.mkv|.*\.mp4">
-  Allow from all
-</Files>
-
 #Initialize mod_rewrite
 RewriteEngine On
 <FilesMatch "\.(html|js|css)$">
